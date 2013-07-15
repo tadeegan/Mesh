@@ -41,7 +41,9 @@
           selectedNode.applyForce(force);
         }
         for(node in Nodes){
-          Nodes[node].calculateForces(gravity_checkbox.checked ? new Vector2(0,0.5) : new Vector2(0,0));
+          var gravity = gravity_checkbox.checked ? new Vector2(0,0.5) : new Vector2(0,0);
+          Nodes[node].applyForce(gravity);
+          Nodes[node].calculateForces();
         }
         
         for(node in Nodes){

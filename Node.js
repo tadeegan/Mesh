@@ -48,10 +48,8 @@ var Node = function(pos, radius){
         return net;
     }
 
-    this.calculateForces = function (gravity) {
-        g = gravity || 0;
+    this.calculateForces = function () {
         _temp_force = findNetForce();
-        _temp_force = Vector2.add(_temp_force, gravity);
         _velocity = Vector2.add(_velocity, _temp_force);
         _velocity.scale(DAMPING);
     }
