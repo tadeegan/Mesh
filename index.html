@@ -8,17 +8,19 @@
     </style>
   </head>
   <body style="background-color:#CCCCCC">
-    <canvas id="myCanvas" width="578" height="200" style="background-color:#FFFFFF"></canvas>
-    <script src="Vector2.js"></script>
-    <script src="Node.js"></script>
-    <script src="Link.js"></script>
-
-    <input type="checkbox" id="termsCheckbox" name="vehicle" value="Car">Gravity
-
+    <div>
+      <canvas id="myCanvas" width="578" height="200" style="background-color:#FFFFFF; position: absolute; z-index: 1;"></canvas>
+      <script src="Vector2.js"></script>
+      <script src="Node.js"></script>
+      <script src="Link.js"></script>
+      <div width="300" height="100"  style="position:absolute; z-index: 2; " >
+        <input type="checkbox" id="termsCheckbox">Gravity
+      </div>
+    </div>
     <script>
       var gravity_checkbox=document.getElementById('termsCheckbox');
       var canvas = document.getElementById('myCanvas');
-      canvas.width = window.innerWidth - 200;
+      canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
       var context = canvas.getContext('2d');
 
